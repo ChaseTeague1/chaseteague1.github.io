@@ -3,22 +3,28 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
     return (
-        <div className="bg-gray-500 w-3/4 mx-auto m-8 rounded-lg">
-            <div className="flex items-center justify-center">
+        <div className="w-3/4 mx-auto m-8 rounded-lg">
+            <div className="flex items-center justify-end">
                 <NavLink
-                    className="text-white m-4"
+                    className={({isActive}) =>
+                        `text-white m-4 hover:text-red-600 transition duration-300 hover:animate-bounce text-lg ${isActive ? "text-red-600" : "text-white"}`
+                    }
                     to='/'
                 >
                     Home
                 </NavLink>
                 <NavLink
-                    className="text-white m-4"
+                    className={({isActive}) =>
+                        `text-white m-4 hover:text-red-600 transition duration-300 hover:animate-bounce text-lg ${isActive ? "text-red-600" : "text-white"}`
+                    }
                     to='/about'
                 >
                     About
                 </NavLink>
                 <NavLink
-                    className="text-white m-4"
+                    className={({isActive}) =>
+                        `text-white m-4 hover:text-red-600 transition duration-300 hover:animate-bounce text-lg ${isActive ? "text-red-600" : "text-white"}`
+                    }
                     to="/projects"
                 >
                     Projects

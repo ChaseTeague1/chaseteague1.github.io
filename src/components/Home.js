@@ -14,7 +14,8 @@ function Home(){
     }
 
     return (
-        <div className="flex flex-col items-center justify-center h-screen ml-72 mb-72">
+        <div className="flex flex-col h-screen items-center">
+            <img className="w-80 h-80 m-0 rounded-full mb-10 shadow-red-600 shadow-[0px_5px_40px_5px_rgba(0,0,0,0.3)]" src="/thumbnail.jpeg"/>
             <h1 className="text-white text-3xl">HI! I'm Chase Teague</h1>
             <button
                 onClick={handleDownload}
@@ -23,7 +24,7 @@ function Home(){
                 Download Resume 
                 <span className="ml-2"><IoCloudDownloadOutline /></span>
             </button>
-            <p className="text-white">Full-Stack Software Engineer</p>
+            <p className="text-white text-5xl mb-30 font-zapfino">Full-Stack Software Engineer</p>
         </div>
     )
 }
