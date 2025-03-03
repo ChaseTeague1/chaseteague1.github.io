@@ -7,7 +7,7 @@ function Navbar() {
             <div className="flex items-center justify-end">
                 <NavLink
                     className={({isActive}) =>
-                        `text-white m-4 hover:text-red-600 transition duration-300 hover:animate-bounce text-lg ${isActive ? "text-red-600" : "text-white"}`
+                        `text-white m-4 hover:text-red-600 transition duration-300 text-lg ${isActive ? "text-red-600" : "text-white"}`
                     }
                     to='/'
                 >
@@ -15,7 +15,7 @@ function Navbar() {
                 </NavLink>
                 <NavLink
                     className={({isActive}) =>
-                        `text-white m-4 hover:text-red-600 transition duration-300 hover:animate-bounce text-lg ${isActive ? "text-red-600" : "text-white"}`
+                        `text-white m-4 hover:text-red-600 transition duration-300 text-lg ${isActive ? "text-red-600" : "text-white"}`
                     }
                     to='/about'
                 >
@@ -23,7 +23,7 @@ function Navbar() {
                 </NavLink>
                 <NavLink
                     className={({isActive}) =>
-                        `text-white m-4 hover:text-red-600 transition duration-300 hover:animate-bounce text-lg ${isActive ? "text-red-600" : "text-white"}`
+                        `text-white m-4 hover:text-red-600 transition duration-300 text-lg ${isActive ? "text-red-600" : "text-white"}`
                     }
                     to="/projects"
                 >

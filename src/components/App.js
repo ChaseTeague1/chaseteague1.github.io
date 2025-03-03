@@ -8,7 +8,7 @@ import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="bg-[url('../public/bgimage.jpg')] bg-cover bg-center min-h-screen flex flex-col items-center">
+    <div className="bg-gray-900 bg-cover bg-center min-h-screen flex flex-col items-center">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home/>} />
