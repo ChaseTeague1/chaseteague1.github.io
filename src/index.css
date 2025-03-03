@@ -8,6 +8,23 @@
 }
 
 .sub {
-	color: rgb(100,220,220);
-	letter-spacing: 1em;
+	color: rgb(221, 21, 21);
+	letter-spacing: 5px;
+  font-size: 32px;
+  text-shadow: white 0px 0px 2px;
+
+}
+
+.fade-in{
+  opacity: 0;
+  animation: fadeInAnimation 3s forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
