@@ -1,33 +1,60 @@
-import React from "react";
+import React, {useState} from "react";
 import Project from "./Project";
 import { SiJavascript, SiPython, SiFlask } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 
 function Projects(){
+    const [isHover, setIsHover] = useState(null)
+    const [hover, setHover] = useState(false)
 
     const projects = [
         {
             title : "I-RATED",
-            skills : [<FaReact />, <SiJavascript />, <SiPython />, <SiFlask />, <RiTailwindCssFill />]
+            description: "Movie review web application that showcases full CRUD usability and admin/user privileges",
+            skills : [
+            {icon: <FaReact/>, colorClass: "text-blue-400"}, 
+            {icon: <SiJavascript />, colorClass: "text-yellow-300"}, 
+            {icon: <SiPython />, colorClass: "text-green-400"}, 
+            {icon: <SiFlask />, colorClass: "text-white"}, 
+            {icon: <RiTailwindCssFill />, colorClass: "text-teal-200"}
+        ]
         },
         {
             title : "Bee-Fit",
-            skills : [<FaReact />, <SiJavascript />, <SiPython />, <SiFlask />]
+            description: "A standard workout out application that allows users to be able to create exercises that they can then add to a workout that they create",
+            skills : [
+            {icon: <FaReact />, colorClass: "text-blue-400"}, 
+            {icon: <SiJavascript />, colorClass: "text-yellow-300"}, 
+            {icon: <SiPython />, colorClass: "text-green-400"}, 
+            {icon: <SiFlask />, colorClass: "text-white"}
+        ]
         },
         {
             title : "Recipe Finder",
-            skills : [<FaReact />, <SiJavascript />]
+            description: "An all inclusive recipe finder, search, filter and create your very own recipes",
+            skills : [
+            {icon: <FaReact />, colorClass: "text-blue-400"}, 
+            {icon: <SiJavascript />, colorClass: "text-yellow-300"}
+        ]
         }
     ]
     return (
-        <div className="flex flex-col justify-center items-center w-full py-8">
-          <h1 className="text-white text-5xl mb-8 text-center">Projects</h1>
+        <div className="flex flex-col justify-center items-center w-3/4 py-8">
+          <h1 className="text-white text-5xl mb-8 text-center glitch" data-text="PROJECTS">PROJECTS</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-3/4">
             {projects.map((project, index) => (
-              <div key={index} className="flex justify-center">
-                <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-xs">
-                  <Project project={project} />
+              <div 
+              key={index} 
+              className="flex justify-center"
+              onMouseEnter={() => setIsHover(index)}
+              onMouseLeave={() => setIsHover(null)}
+              >
+                <div 
+                className={`bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-xs transition-all duration-300 ease-in-out 
+                    ${isHover === index ? "h-56" : "h-32"}`}
+                >
+                  <Project project={project} isHover={isHover === index}/>
                 </div>
               </div>
             ))}
