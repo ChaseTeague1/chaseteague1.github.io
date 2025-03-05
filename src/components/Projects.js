@@ -6,11 +6,11 @@ import { RiTailwindCssFill } from "react-icons/ri";
 
 function Projects(){
     const [isHover, setIsHover] = useState(null)
-    const [hover, setHover] = useState(false)
 
     const projects = [
         {
             title : "I-RATED",
+            github: "https://github.com/ChaseTeague1/i-rated",
             description: "Movie review web application that showcases full CRUD usability and admin/user privileges",
             skills : [
             {icon: <FaReact/>, colorClass: "text-blue-400"}, 
@@ -18,25 +18,30 @@ function Projects(){
             {icon: <SiPython />, colorClass: "text-green-400"}, 
             {icon: <SiFlask />, colorClass: "text-white"}, 
             {icon: <RiTailwindCssFill />, colorClass: "text-teal-200"}
-        ]
+        ],
+            glow: "shadow-green-500 shadow-lg"
         },
         {
             title : "Bee-Fit",
-            description: "A standard workout out application that allows users to be able to create exercises that they can then add to a workout that they create",
+            github: "https://github.com/ChaseTeague1/Bee-Fit",
+            description: "A standard workout out application that allows users to be able to create exercises",
             skills : [
             {icon: <FaReact />, colorClass: "text-blue-400"}, 
             {icon: <SiJavascript />, colorClass: "text-yellow-300"}, 
             {icon: <SiPython />, colorClass: "text-green-400"}, 
             {icon: <SiFlask />, colorClass: "text-white"}
-        ]
+        ],
+            glow: "shadow-yellow-500 shadow-lg"
         },
         {
             title : "Recipe Finder",
-            description: "An all inclusive recipe finder, search, filter and create your very own recipes",
+            github: "https://github.com/ChaseTeague1/recipe-finder",
+            description: "An all inclusive recipe finder, search, filter and create your very own recipes and explore others",
             skills : [
             {icon: <FaReact />, colorClass: "text-blue-400"}, 
             {icon: <SiJavascript />, colorClass: "text-yellow-300"}
-        ]
+        ],
+            glow: "shadow-orange-500 shadow-lg"
         }
     ]
     return (
@@ -51,8 +56,9 @@ function Projects(){
               onMouseLeave={() => setIsHover(null)}
               >
                 <div 
-                className={`bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-xs transition-all duration-300 ease-in-out 
-                    ${isHover === index ? "h-56" : "h-32"}`}
+                className={`bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-xs transition-all duration-300 ease-in-out
+                    ${isHover === index ? "h-56" : "h-32"}
+                    ${isHover === index ? project.glow : ""}`}
                 >
                   <Project project={project} isHover={isHover === index}/>
                 </div>

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FaGithub } from "react-icons/fa";
 
 function Project({project, isHover}){
 
@@ -8,7 +8,16 @@ function Project({project, isHover}){
           <h2 className="text-3xl text-white text-center">{project.title}</h2>
           <div>
           {
-            isHover && (<p className="text-md text-red-500 text-center">{project.description}</p>)
+            isHover && (
+                <div className="text-center align-center">
+                    <p className="text-md text-red-500 text-center">{project.description}</p>
+                    <p className="text-center text-2xl m-2">
+                        <a target="_blank" href={project.github} className="flex justify-center item-center">
+                            <FaGithub className="text-white text-center"/>
+                        </a>
+                    </p>
+                </div>
+        )
           }
           </div>
           <div className="flex-grow"></div>
