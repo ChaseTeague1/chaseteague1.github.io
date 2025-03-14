@@ -57,7 +57,7 @@ function Projects(){
               >
                 <div 
                 className={`bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-xs transition-all duration-300 ease-in-out
-                    ${isHover === index ? "h-56" : "h-32"}
+                    ${isHover === index ? "h-56 bg-gray-700" : "h-32"}
                     ${isHover === index ? project.glow : ""}`}
                 >
                   <Project project={project} isHover={isHover === index}/>

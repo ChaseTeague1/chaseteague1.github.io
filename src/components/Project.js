@@ -1,7 +1,17 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { FaGithub } from "react-icons/fa";
 
 function Project({project, isHover}){
+  const [hovered, setHovered] = useState(false)
+
+  useEffect(() => {
+    if (isHover) {
+      const timer = setTimeout(() => setHovered(true), 100);
+      return () => clearTimeout(timer);
+    } else {
+      setHovered(false)
+    }
+  }, [isHover])
 
     return (
         <div className="flex flex-col justify-between h-full">
@@ -9,9 +19,11 @@ function Project({project, isHover}){
           <div>
           {
             isHover && (
-                <div className="text-center align-center">
-                    <p className="text-md text-red-500 text-center">{project.description}</p>
-                    <p className="text-center text-2xl m-2">
+                <div className={`text-center align-center transition-opacity duration-500 ease-in-out ${
+                  hovered ? "opacity-100" : "opacity-0"
+                }`}>
+                    <p className="text-md text-white text-center opacity-70">{project.description}</p>
+                    <p className="text-center text-4xl m-2">
                         <a target="_blank" href={project.github} className="flex justify-center item-center">
                             <FaGithub className="text-white text-center"/>
                         </a>
