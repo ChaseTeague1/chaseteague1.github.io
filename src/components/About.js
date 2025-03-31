@@ -20,13 +20,19 @@ function About(){
                 <span className="text-blue-500"> SQL</span>.  
                 </p>
                 <h1 className="text-white m-10 text-4xl font-bold">Education</h1>
-                <div className="h-auto bg-gray-700 rounded hover:shadow-blue-400 hover:shadow-lg">
+                <div className="h-auto bg-gray-700 m-4 rounded hover:shadow-green-400 hover:shadow-lg">
+                    <h2 className="text-white text-2xl">USC Upstate</h2>
+                    <p className="text-gray-400">August 2019 - March 2022</p>
+                    <p className="text-gray-300 italic">not graduated</p>
+                </div>
+                <div className="h-auto bg-gray-700 m-4 rounded hover:shadow-blue-400 hover:shadow-lg">
                     <h2 className="text-white text-2xl">Flatiron School</h2>
                     <p className="text-gray-400">August 2023 - October 2024</p>
+                    <p className="text-gray-300 italic">graduated</p>
                 </div>
-                <h1 className="text-white m-10 text-4xl font-bold">Contact Me</h1>
+                <h1 className="text-white m-10 mb-2 text-4xl font-bold">Contact Me</h1>
                 <div className="text-white">
-                    <p>teaguechase2@gmail.com</p>
+                    <p className="text-gray-300 text-2xl mt-0">teaguechase2@gmail.com</p>
                 </div>
             </div>
         </div>
