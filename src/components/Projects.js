@@ -11,7 +11,7 @@ function Projects(){
         {
             title : "I-RATED",
             github: "https://github.com/ChaseTeague1/i-rated",
-            description: "Movie review web application that showcases full CRUD usability and admin/user privileges",
+            description: "Movie review web application that has full CRUD/admin/user privileges",
             skills : [
             {icon: <FaReact/>, colorClass: "text-blue-400"}, 
             {icon: <SiJavascript />, colorClass: "text-yellow-300"}, 
@@ -24,7 +24,7 @@ function Projects(){
         {
             title : "Bee-Fit",
             github: "https://github.com/ChaseTeague1/Bee-Fit",
-            description: "A standard workout out application that allows users to be able to create exercises",
+            description: "A standard workout out application able to create exercises",
             skills : [
             {icon: <FaReact />, colorClass: "text-blue-400"}, 
             {icon: <SiJavascript />, colorClass: "text-yellow-300"}, 
@@ -36,7 +36,7 @@ function Projects(){
         {
             title : "Recipe Finder",
             github: "https://github.com/ChaseTeague1/recipe-finder",
-            description: "An all inclusive recipe finder, search, filter and create your very own recipes and explore others",
+            description: "An all inclusive recipe finder; search, filter and create recipes",
             skills : [
             {icon: <FaReact />, colorClass: "text-blue-400"}, 
             {icon: <SiJavascript />, colorClass: "text-yellow-300"}
