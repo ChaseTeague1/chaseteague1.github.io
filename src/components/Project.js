@@ -23,13 +23,13 @@ function Project({ project, isHover }) {
         <h2 className="text-2xl font-bold text-white text-center mb-2 z-10">{project.title}</h2>
         <div className="flex flex-col flex-grow min-h-[130px] relative">
           {renderDescription && (
-            <div 
+            <div
               className={`absolute inset-x-0 top-0 bottom-[40px] flex flex-col transition-all duration-300 ${
                 hovered ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
               }`}
-              style={{ pointerEvents: hovered ? 'auto' : 'none' }}
+              style={{ pointerEvents: hovered ? "auto" : "none" }}
             >
-              <p className="text-sm text-center text-gray-300 mb-2 flex-grow line-clamp-4">
+              <p className="text-sm text-center text-gray-300 mb-2 flex-grow overflow-y-auto max-h-[200px]">
                 {project.description}
               </p>
               <div className="flex justify-center h-8 mb-2">
@@ -51,11 +51,9 @@ function Project({ project, isHover }) {
               {project.skills.map((skill, index) => (
                 <span
                   key={index}
-                  className={`
-                    text-xl transition-all duration-300 ease-in-out
-                    ${isHover ? skill.colorClass : "text-gray-400"}
-                    ${isHover ? "opacity-100" : "opacity-80"}
-                  `}
+                  className={`text-xl transition-all duration-300 ease-in-out ${
+                    isHover ? skill.colorClass : "text-gray-400"
+                  } ${isHover ? "opacity-100" : "opacity-80"}`}
                 >
                   {skill.icon}
                 </span>
